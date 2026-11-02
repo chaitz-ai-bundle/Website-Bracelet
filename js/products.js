@@ -1,0 +1,98 @@
+// ---------------------------------------------------------------
+// Store settings — edit these to match your business.
+// ---------------------------------------------------------------
+const STORE = {
+  name: "Jagat",
+  currency: "INR",          // e.g. "INR", "USD", "EUR"
+  locale: "en-IN",
+  defaultPrice: 1499,       // used when a product has no price of its own
+  freeShippingOver: 2500,
+  shippingFee: 99,
+  // Orders are sent here. Set one or both:
+  whatsappNumber: "",       // international format, digits only, e.g. "919876543210"
+  orderEmail: "",           // e.g. "orders@jagat.com"
+};
+
+// What each stone is traditionally associated with.
+const STONES = {
+  "Rose Quartz": "Unconditional love and self-compassion",
+  "Moonstone": "New beginnings and emotional balance",
+  "Rainbow Moonstone": "Intuition and inner vision",
+  "Unakite": "Emotional healing and patience",
+  "Clear Quartz": "Clarity; amplifies the stones around it",
+  "Howlite": "Calm and a quiet mind",
+  "Amazonite": "Soothing energy and honest expression",
+  "Labradorite": "Intuition and transformation",
+  "Amethyst": "Peace, calm and restful sleep",
+  "Tiger's Eye": "Courage and confidence",
+  "Red Jasper": "Strength, stamina and stability",
+  "Sunstone": "Joy, warmth and motivation",
+  "Fluorite": "Focus and clear thinking",
+  "Carnelian": "Creativity and drive",
+  "Lapis Lazuli": "Wisdom and self-expression",
+  "Smoky Quartz": "Releasing stress and negativity",
+  "Black Obsidian": "Protection and grounding",
+  "Black Tourmaline": "Protection and shielding",
+  "Turquoise": "Positivity and wholeness",
+  "Citrine": "Optimism and abundance",
+  "Selenite": "Cleansing and serenity",
+  "Hematite": "Grounding and focus",
+  "Pyrite": "Prosperity and willpower",
+  "Bloodstone": "Vitality and courage",
+  "Serpentine": "Renewal and self-healing",
+  "Sodalite": "Logic, truth and calm",
+  "Lepidolite": "Easing anxiety and transition",
+  "Moss Agate": "Growth and new starts",
+  "Green Aventurine": "Luck and opportunity",
+  "Kunzite": "Gentle love and an open heart",
+  "Prehnite": "Unconditional love and trust",
+  "Rudraksha": "Spiritual protection and peace",
+  "Opal": "Inspiration and emotional depth",
+};
+
+const PRODUCTS = [
+  { id: 1,  name: "Self Love & Acceptance", tag: "Love",       stones: ["Rose Quartz", "Moonstone", "Unakite", "Clear Quartz"],
+    blurb: "A soft blush blend to remind you that you are already enough." },
+  { id: 2,  name: "Inner Calm",            tag: "Calm",       stones: ["Howlite", "Amazonite", "Labradorite", "Amethyst"],
+    blurb: "Cool whites and sea greens to quiet a busy mind." },
+  { id: 3,  name: "Confidence & Motivation", tag: "Energy",   stones: ["Tiger's Eye", "Red Jasper", "Sunstone"],
+    blurb: "Warm, earthy tones for the days you need to show up boldly." },
+  { id: 4,  name: "Creativity & Inspiration", tag: "Energy",  stones: ["Fluorite", "Carnelian", "Lapis Lazuli"],
+    blurb: "Deep violets and blues to open the door to new ideas." },
+  { id: 5,  name: "Better Sleep",          tag: "Calm",       stones: ["Amethyst", "Smoky Quartz", "Lapis Lazuli", "Black Obsidian"],
+    blurb: "A grounding nighttime blend for restful, deeper sleep." },
+  { id: 6,  name: "Positivity / Good Vibes Only", tag: "Energy", stones: ["Turquoise", "Citrine", "Selenite"],
+    blurb: "Sunny citrine and bright turquoise for everyday optimism." },
+  { id: 7,  name: "Protection",            tag: "Protection", stones: ["Black Tourmaline", "Black Obsidian", "Smoky Quartz", "Labradorite"],
+    blurb: "Our strongest shielding blend for busy, draining days." },
+  { id: 8,  name: "Success & Growth",      tag: "Abundance",  stones: ["Tiger's Eye", "Hematite", "Pyrite", "Black Tourmaline"],
+    blurb: "Metallic pyrite and hematite for ambition that stays grounded." },
+  { id: 9,  name: "Health / Vitality",     tag: "Healing",    stones: ["Bloodstone", "Serpentine", "Clear Quartz"],
+    blurb: "Forest greens to support strength and renewed energy." },
+  { id: 10, name: "Focus & Concentration", tag: "Calm",       stones: ["Sodalite", "Citrine", "Lepidolite"],
+    blurb: "Blue and gold beads to keep your attention where it matters." },
+  { id: 11, name: "Healing & Renewal",     tag: "Healing",    stones: ["Sodalite", "Moss Agate", "Green Aventurine"],
+    blurb: "Deep blue and fresh green for steady recovery and growth." },
+  { id: 12, name: "Intuition",             tag: "Spirit",     stones: ["Labradorite", "Rainbow Moonstone", "Amethyst"],
+    blurb: "Flashing labradorite to help you trust your inner voice." },
+  { id: 13, name: "Grounding",             tag: "Protection", stones: ["Red Jasper", "Smoky Quartz", "Black Tourmaline"],
+    blurb: "Earth reds and blacks to bring you back to the present." },
+  { id: 14, name: "Love & Relationships",  tag: "Love",       stones: ["Kunzite", "Rose Quartz", "Prehnite"],
+    blurb: "Lilac, pink and soft green for open-hearted connection." },
+  { id: 15, name: "Prosperity & Abundance", tag: "Abundance", stones: ["Pyrite", "Citrine", "Black Tourmaline"],
+    blurb: "Gold-toned stones to invite abundance into your life." },
+  { id: 16, name: "Manifestation",         tag: "Abundance",  stones: ["Green Aventurine", "Moonstone", "Clear Quartz"],
+    blurb: "Set your intention and let clear quartz amplify it." },
+  { id: 17, name: "Feminine Balance",      tag: "Love",       stones: ["Moonstone", "Rose Quartz", "Kunzite"],
+    blurb: "Gentle moonstone and pastel pinks for harmony and grace." },
+  { id: 18, name: "Renewal",               tag: "Spirit",     stones: ["Selenite", "Clear Quartz", "Rudraksha"],
+    blurb: "Sacred Rudraksha seeds paired with cleansing white stones." },
+  { id: 19, name: "Serenity",              tag: "Calm",       stones: ["Opal", "Moonstone", "Selenite"],
+    blurb: "Luminous, milky opal for a feeling of pure stillness." },
+  { id: 20, name: "Balance & Harmony",     tag: "Spirit",     stones: ["Amethyst", "Lapis Lazuli", "Amazonite", "Green Aventurine", "Citrine", "Carnelian", "Red Jasper"],
+    blurb: "A seven-chakra rainbow to align body, mind and spirit." },
+].map(p => ({
+  price: STORE.defaultPrice,
+  image: `images/bracelet-${String(p.id).padStart(2, "0")}.jpg`,
+  ...p,
+}));

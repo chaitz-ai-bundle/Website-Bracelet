@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jagat — Gemstone Bracelets</title>
+  <meta name="description" content="Jagat: 20 handmade gemstone bracelets, each with our signature lotus charm. Choose by intention — calm, love, protection, abundance and more.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 10c6 8 6 22 0 32-6-10-6-24 0-32zM32 42c-8-2-16-10-18-22 10 2 16 10 18 22zM32 42c8-2 16-10 18-22-10 2-16 10-18 22zM32 44c-10 2-20-2-26-10 10-2 20 2 26 10zM32 44c10 2 20-2 26-10-10-2-20 2-26 10z' fill='%238a6a4f'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="announce">Free shipping on orders over <span id="free-ship-amount"></span> · Every piece features our signature lotus charm</div>
+
+  <header class="site-header">
+    <a href="#" class="logo" aria-label="Jagat home">
+      <svg class="lotus" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 10c6 8 6 22 0 32-6-10-6-24 0-32zM32 42c-8-2-16-10-18-22 10 2 16 10 18 22zM32 42c8-2 16-10 18-22-10 2-16 10-18 22zM32 44c-10 2-20-2-26-10 10-2 20 2 26 10zM32 44c10 2 20-2 26-10-10-2-20 2-26 10z"/></svg>
+      <span>JAGAT</span>
+    </a>
+    <nav class="nav">
+      <a href="#shop">Shop</a>
+      <a href="#about">Our Story</a>
+      <a href="#care">Care</a>
+    </nav>
+    <button class="cart-btn" id="cart-open" aria-label="Open cart">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7zm3 0a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      <span class="cart-count" id="cart-count">0</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">The 20 Bracelet Collection</p>
+      <h1>Wear your <em>intention</em>.</h1>
+      <p class="lede">Natural gemstones, hand-strung and finished with a silver lotus charm. Pick the bracelet that matches what you want more of in your life.</p>
+      <a href="#shop" class="btn">Shop the collection</a>
+    </div>
+    <div class="hero-img">
+      <img src="images/bracelet-20.jpg" alt="Balance & Harmony seven-chakra gemstone bracelet with lotus charm">
+    </div>
+  </section>
+
+  <section class="values">
+    <div><strong>Natural stones</strong><span>Genuine gemstones, no plastic</span></div>
+    <div><strong>Lotus charm</strong><span>Our signature on every piece</span></div>
+    <div><strong>Stretch fit</strong><span>Comfortable, easy on and off</span></div>
+    <div><strong>Gift ready</strong><span>Arrives in a keepsake pouch</span></div>
+  </section>
+
+  <main id="shop" class="shop">
+    <div class="shop-head">
+      <h2>Shop by intention</h2>
+      <div class="filters" id="filters" role="tablist"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <section id="about" class="about">
+    <div>
+      <p class="eyebrow">Our Story</p>
+      <h2>Jagat means “the world”.</h2>
+      <p>We believe the small things we carry with us shape how we move through it. Each Jagat bracelet brings together stones chosen for one intention, strung by hand and finished with the lotus, a symbol of growth that rises clear from muddy water.</p>
+    </div>
+  </section>
+
+  <section id="care" class="care">
+    <h2>Caring for your bracelet</h2>
+    <div class="care-grid">
+      <div><h3>Keep it dry</h3><p>Remove before swimming, bathing or exercise to protect the stones and the stretch cord.</p></div>
+      <div><h3>Roll, don't pull</h3><p>Roll the bracelet over your hand instead of stretching it on and off.</p></div>
+      <div><h3>Cleanse often</h3><p>Rest it on selenite or in moonlight overnight to reset its energy.</p></div>
+    </div>
+    <p class="disclaimer">Gemstone meanings are traditional beliefs and are not a substitute for medical advice. Natural stones vary in colour and pattern, so each bracelet is one of a kind.</p>
+  </section>
+
+  <footer class="footer">
+    <div class="logo small">
+      <svg class="lotus" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 10c6 8 6 22 0 32-6-10-6-24 0-32zM32 42c-8-2-16-10-18-22 10 2 16 10 18 22zM32 42c8-2 16-10 18-22-10 2-16 10-18 22zM32 44c-10 2-20-2-26-10 10-2 20 2 26 10zM32 44c10 2 20-2 26-10-10-2-20 2-26 10z"/></svg>
+      <span>JAGAT</span>
+    </div>
+    <p>© <span id="year"></span> Jagat. Handmade with intention.</p>
+  </footer>
+
+  <!-- Product dialog -->
+  <dialog id="product-dialog" class="product-dialog">
+    <button class="close" data-close aria-label="Close">×</button>
+    <div id="product-detail"></div>
+  </dialog>
+
+  <!-- Cart drawer -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Cart" aria-hidden="true">
+    <div class="drawer-head">
+      <h2 id="drawer-title">Your cart</h2>
+      <button class="close" id="cart-close" aria-label="Close cart">×</button>
+    </div>
+    <div class="drawer-body" id="drawer-body"></div>
+    <div class="drawer-foot" id="drawer-foot"></div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
