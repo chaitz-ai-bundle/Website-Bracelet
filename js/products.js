@@ -3,13 +3,13 @@
 // ---------------------------------------------------------------
 const STORE = {
   name: "Jagat",
-  currency: "INR",          // e.g. "INR", "USD", "EUR"
-  locale: "en-IN",
-  defaultPrice: 1499,       // used when a product has no price of its own
-  freeShippingOver: 2500,
-  shippingFee: 99,
+  currency: "GBP",          // e.g. "GBP", "USD", "EUR"
+  locale: "en-GB",
+  defaultPrice: 50,         // used when a product has no price of its own
+  freeShippingOver: 75,
+  shippingFee: 3.99,
   // Orders are sent here. Set one or both:
-  whatsappNumber: "",       // international format, digits only, e.g. "919876543210"
+  whatsappNumber: "",       // international format, digits only, e.g. "447700900123"
   orderEmail: "",           // e.g. "orders@jagat.com"
 };
 

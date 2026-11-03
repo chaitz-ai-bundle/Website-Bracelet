@@ -9,8 +9,8 @@ Open `index.html`, or run `python3 -m http.server` and visit http://localhost:80
 Everything is in `js/products.js`:
 
 - `STORE.defaultPrice`, `freeShippingOver`, `shippingFee`, `currency`
-- Give a single bracelet its own price by adding `price: 1799` to its entry in `PRODUCTS`
-- **`STORE.whatsappNumber`** (e.g. `"919876543210"`) — orders open in WhatsApp, pre-filled, for the customer to send to you
+- Give a single bracelet its own price by adding `price: 55` to its entry in `PRODUCTS`
+- **`STORE.whatsappNumber`** (e.g. `"447700900123"`) — orders open in WhatsApp, pre-filled, for the customer to send to you
 - or **`STORE.orderEmail`** — orders open in the customer's email app instead
 
 Until one of these is set, the checkout shows a confirmation but the order is not sent anywhere.

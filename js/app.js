@@ -17,7 +17,7 @@
   const CART_KEY = "jagat-cart";
 
   const money = n => new Intl.NumberFormat(STORE.locale, {
-    style: "currency", currency: STORE.currency, maximumFractionDigits: 0,
+    style: "currency", currency: STORE.currency, minimumFractionDigits: 0, maximumFractionDigits: 2,
   }).format(n);
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const swatch = s => `<span class="swatch" style="background:${STONE_COLORS[s] || "#ccc"}" title="${esc(s)}"></span>`;
@@ -216,11 +216,11 @@
         <label>Address<textarea name="address" rows="2" required autocomplete="street-address"></textarea></label>
         <div class="row2">
           <label>City<input name="city" required autocomplete="address-level2"></label>
-          <label>PIN / Postcode<input name="zip" required autocomplete="postal-code"></label>
+          <label>Postcode<input name="zip" required autocomplete="postal-code"></label>
         </div>
         <label>Payment
           <select name="payment">
-            <option>UPI / Online payment link</option>
+            <option>Card / online payment link</option>
             <option>Cash on delivery</option>
           </select>
         </label>
